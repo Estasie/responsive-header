@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Futura Futuris C";
+    src: url(../fonts/FuturaFuturisC_0.otf);
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Futura Futuris C";
+    src: url(../fonts/FuturaFuturisLightC_0.otf);
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: "Gotham Pro";
+    src: url(../fonts/GothamLight.ttf);
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Gotham Pro";
+    src: url(../fonts/GothamBold.ttf);
+    font-weight: 600;
+  }
+*{
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Gotham Pro';
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+ul{
+    list-style: none;
+}
+.header__wrapper{
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid #00000030;
+    padding: 30px 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__top{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__top .header__location{
+    position: absolute;
+    display: flex;
+    color: #1d1d1d;
+    left: 50px;
+    justify-content: center;
+}
+
+.header__location a{
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 1.125rem;
+}
+.location__city{
+    color: #1d1d1d;
+    display: flex;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+
+.location__city i.fa{
+    margin-left: 1em;
+    font-weight: 100;
+}
+
+
+
+.location__city:hover, .header__location a:hover{
+    color: pink;
+    transition: color .2s ease-in-out;
+}
+
+.location__city button {
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+.header__logo{
+    max-height: 100%;
+    width: 200px;
+    height: 50px;
+    display: inline-flex;
+}
+
+.header__logo img{
+    width: 100%;
+}
+
+ .header__top .header__user{
+    position: absolute;
+    right: 50px;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__user .fa-shopping-bag, .header__user .fa-heart, .header__user .fa-user, .header__user .fa-search {
+    font-weight: 300;
+    color: #1d1d1d;
+    font-size: 1.125rem;
+}
+
+.header__user i:hover{
+    color: pink;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+}
+
+.header__bottom nav{
+    display: flex;
+    justify-content: center;
+}
+
+.header__bottom a{
+    color: #1d1d1d;
+    padding: 0 1rem;
+}
+
+
+.header__bottom a:hover {
+    color: pink;
+    transition: color .2s ease-in-out;
+}
+
+.header__bottom a:after {
+display: flex; 
+content: ""; 
+height: 1px; 
+width: 0%; 
+margin-top: .5rem;
+background-color: pink; 
+transition: width 0.4s ease-in-out; 
+}
+.header__bottom a:hover:after {
+width: 100%;
+}
+
+.header__bottom .fa-palette {
+    font-weight: 300;
+}
+
+
+.dropdown{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    background: white;
+    border-bottom: 1px solid #00000030;
+    position: relative;
+    opacity: 0;
+    
+}
+#dropdown .sub__menu{
+    position: relative;
+    transition: display .2s ease-in;
+}
+.open_menu {
+    opacity: 1;
+}
+.sub__menu ul li{
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.sub__menu ul li:last-child{
+    padding-bottom: 0;
+}
+
+.sub__menu ul li:hover{
+    color: pink;
+}
+
+.sub__menu li i.fa-angle-right{
+    font-weight: 300;
+    right: 30px;
+}
+
+.sub__menu ul {
+    width: 30%;
+}
+.sub__menu--more{
+    display: none;
+    margin-left: 50px;
+    transition: margin-left .3s ease-in;
+}
+
+.sub__menu ul li:hover .sub__menu--more{
+    display: block;
+    position: absolute;
+    margin-left: 350px;
+    top: 48px;
+    width: 100%;
+    
+}
+
+
